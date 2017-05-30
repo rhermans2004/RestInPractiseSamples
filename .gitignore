@@ -3,3 +3,8 @@
 ################################################################################
 
 *.cache
+/RestInPractice/Src/Chapter3-WCFPOXService/WCF Pox Service/WcfPox/bin
+/RestInPractice/Src/Chapter3-WCFPOXService/WCF Pox Service/WcfPox/obj
+*.suo
+/RestInPractice/Src/Chapter3-DotNetPOXClient/DotNet Pox Client/PoxClient/bin
+/RestInPractice/Src/Chapter3-DotNetPOXClient/DotNet Pox Client/PoxClient/obj
