@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ordering.example.org" elementFormDefault="qualified" targetNamespace="http://ordering.example.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:7070/?xsd=xsd2" namespace="http://ordering.example.org/order" />
+  <xs:element name="PlaceOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://ordering.example.org/order" minOccurs="0" name="order" nillable="true" type="q1:Order" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlaceOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://ordering.example.org/order" minOccurs="0" name="PlaceOrderResult" nillable="true" type="q2:OrderConfirmation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
