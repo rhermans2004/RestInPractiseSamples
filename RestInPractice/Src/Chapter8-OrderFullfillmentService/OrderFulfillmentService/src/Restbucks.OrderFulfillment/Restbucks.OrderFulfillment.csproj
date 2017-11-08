@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8708A16A-AED1-40C3-972F-E10E19A3271A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Restbucks.OrderFulfillment</RootNamespace>
+    <AssemblyName>Restbucks.OrderFulfillment</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>"/client:iexplore.exe" "/clientArgs:http://localhost:8732/Design_Time_Addresses/Restbucks.OrderFulfillment/Feed1/"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CommandFactory.cs" />
+    <Compile Include="Commands\CreateFulfillment.cs" />
+    <Compile Include="Commands\DeleteFulfillment.cs" />
+    <Compile Include="Commands\GetFulfillment.cs" />
+    <Compile Include="Commands\GetFulfillmentCollection.cs" />
+    <Compile Include="Commands\UpdateFulfillment.cs" />
+    <Compile Include="IOrderFulfillmentService.cs" />
+    <Compile Include="MediaTypes.cs" />
+    <Compile Include="Model\DateTimeProvider.cs" />
+    <Compile Include="Model\EditLink.cs" />
+    <Compile Include="Model\ETaggedEntity.cs" />
+    <Compile Include="Model\Fulfillment.cs" />
+    <Compile Include="Model\FulfillmentCollection.cs" />
+    <Compile Include="Model\IDateTimeProvider.cs" />
+    <Compile Include="Model\IdGenerator.cs" />
+    <Compile Include="Model\IIdGenerator.cs" />
+    <Compile Include="Model\MemberAlreadyExistsException.cs" />
+    <Compile Include="Model\MemberDoesNotExistException.cs" />
+    <Compile Include="Model\MemberNoLongerExistsException.cs" />
+    <Compile Include="Model\OptimisticUpdateFailedException.cs" />
+    <Compile Include="Model\Repository.cs" />
+    <Compile Include="Model\IRepository.cs" />
+    <Compile Include="OrderFulfillmentService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Restbucks.WcfRestToolkit\Restbucks.WcfRestToolkit.csproj">
+      <Project>{4187012F-110C-4908-9D47-A068FCBB8046}</Project>
+      <Name>Restbucks.WcfRestToolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

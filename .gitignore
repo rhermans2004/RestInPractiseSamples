@@ -8,3 +8,8 @@
 *.suo
 /RestInPractice/Src/Chapter3-DotNetPOXClient/DotNet Pox Client/PoxClient/bin
 /RestInPractice/Src/Chapter3-DotNetPOXClient/DotNet Pox Client/PoxClient/obj
+*.exe
+*.pdb
+*.dll
+RestInPractice/Src/Chapter4-DotNetOrderingClient/DotNetOrderingClient/UpgradeLog.htm
+RestInPractice/Src/Chapter4-HttpListenerOrderingService/HttpListenerOrderingService/UpgradeLog.htm

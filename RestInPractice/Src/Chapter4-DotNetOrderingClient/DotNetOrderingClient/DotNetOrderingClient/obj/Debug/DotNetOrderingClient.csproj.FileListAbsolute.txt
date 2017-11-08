@@ -1,0 +1,5 @@
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-DotNetOrderingClient\DotNetOrderingClient\DotNetOrderingClient\bin\Debug\DotNetOrderingClient.exe
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-DotNetOrderingClient\DotNetOrderingClient\DotNetOrderingClient\bin\Debug\DotNetOrderingClient.pdb
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-DotNetOrderingClient\DotNetOrderingClient\DotNetOrderingClient\obj\Debug\DotNetOrderingClient.csprojResolveAssemblyReference.cache
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-DotNetOrderingClient\DotNetOrderingClient\DotNetOrderingClient\obj\Debug\DotNetOrderingClient.exe
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-DotNetOrderingClient\DotNetOrderingClient\DotNetOrderingClient\obj\Debug\DotNetOrderingClient.pdb

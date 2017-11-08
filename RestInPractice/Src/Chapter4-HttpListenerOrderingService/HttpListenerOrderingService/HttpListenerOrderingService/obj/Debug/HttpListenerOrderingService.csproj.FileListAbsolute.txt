@@ -1,0 +1,5 @@
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-HttpListenerOrderingService\HttpListenerOrderingService\HttpListenerOrderingService\bin\Debug\HttpListenerOrderingService.exe
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-HttpListenerOrderingService\HttpListenerOrderingService\HttpListenerOrderingService\bin\Debug\HttpListenerOrderingService.pdb
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-HttpListenerOrderingService\HttpListenerOrderingService\HttpListenerOrderingService\obj\Debug\HttpListenerOrderingService.csprojResolveAssemblyReference.cache
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-HttpListenerOrderingService\HttpListenerOrderingService\HttpListenerOrderingService\obj\Debug\HttpListenerOrderingService.exe
+D:\Roel\Src\GitHub\Samples\RestInPractice\Src\Chapter4-HttpListenerOrderingService\HttpListenerOrderingService\HttpListenerOrderingService\obj\Debug\HttpListenerOrderingService.pdb

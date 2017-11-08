@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7FA4F547-BEA3-4545-9F1C-BE2FC10E853A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Restbucks.OrderFulfillment.Tests</RootNamespace>
+    <AssemblyName>Restbucks.OrderFulfillment.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.0.9122, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\tools\nunit\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.4.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\tools\rhinomocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OrderFulfillment\Commands\CreateFulfillmentTests.cs" />
+    <Compile Include="OrderFulfillment\Commands\DeleteFulfillmentTests.cs" />
+    <Compile Include="OrderFulfillment\Commands\GetFulfillmentCollectionTests.cs" />
+    <Compile Include="OrderFulfillment\Commands\GetFulfillmentTests.cs" />
+    <Compile Include="OrderFulfillment\Commands\UpdateFulfillmentTests.cs" />
+    <Compile Include="OrderFulfillment\Model\EditLinkTests.cs" />
+    <Compile Include="OrderFulfillment\Model\FulfillmentCollectionTests.cs" />
+    <Compile Include="OrderFulfillment\Model\FulfillmentTests.cs" />
+    <Compile Include="OrderFulfillment\Model\RepositoryTests.cs" />
+    <Compile Include="OrderFulfillment\Utility\DateTimes.cs" />
+    <Compile Include="OrderFulfillment\Utility\ETaggedEntityBuilder.cs" />
+    <Compile Include="OrderFulfillment\Utility\FakeDateTimeProvider.cs" />
+    <Compile Include="OrderFulfillment\Utility\FakeIdGenerator.cs" />
+    <Compile Include="OrderFulfillment\Utility\FakeRepository.cs" />
+    <Compile Include="OrderFulfillment\Utility\FulfillmentBuilder.cs" />
+    <Compile Include="OrderFulfillment\Utility\FulfillmentCollectionBuilder.cs" />
+    <Compile Include="OrderFulfillment\Utility\MemberBuilder.cs" />
+    <Compile Include="OrderFulfillment\Utility\Order.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WcfRestToolkit\Http\HeaderValues\EntityTagTests.cs" />
+    <Compile Include="WcfRestToolkit\Http\HeaderValues\MediaTypeTests.cs" />
+    <Compile Include="WcfRestToolkit\Syndication\AtomPub\CollectionTests.cs" />
+    <Compile Include="WcfRestToolkit\Syndication\AtomPub\DraftStatusTests.cs" />
+    <Compile Include="WcfRestToolkit\Syndication\AtomPub\MemberTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Restbucks.OrderFulfillment\Restbucks.OrderFulfillment.csproj">
+      <Project>{8708A16A-AED1-40C3-972F-E10E19A3271A}</Project>
+      <Name>Restbucks.OrderFulfillment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Restbucks.WcfRestToolkit\Restbucks.WcfRestToolkit.csproj">
+      <Project>{4187012F-110C-4908-9D47-A068FCBB8046}</Project>
+      <Name>Restbucks.WcfRestToolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
